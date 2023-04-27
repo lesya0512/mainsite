@@ -188,7 +188,6 @@ section.banner .right .text {
     align-items: center;
     text-align: right;
     display: flex;
-    justify-content: space-between;
 }
 
 /*  */
@@ -198,6 +197,7 @@ section.katalog .container h1 {
     color: var(--dark-blue);
     text-transform: uppercase;
     font-weight: 800;
+    margin: 30px 0;
 }
 
 section.katalog .container .katalog-area {
@@ -248,7 +248,7 @@ section.advantages .container .advantages h1 {
     text-transform: uppercase;
 }
 section.advantages .container .advantages .text img {
-    margin-top: -120px;
+    margin-top: -90px;
 }
 
 section.advantages .container .advantages {
@@ -280,7 +280,7 @@ section.hits .container h1 {
 
     color: var(--dark-blue);
 
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 section.hits .container .hits-area {
@@ -293,9 +293,10 @@ section.hits .container .hits-area .hits-item {
     box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
     border-radius: 10px;
     padding: 15px;
+    margin: 20px 0;
 
     width: 220px;
-    height: 365px;
+    height: 370px;
 }
 
 section.hits .container .hits-area .hits-item .top,
@@ -321,11 +322,15 @@ section.hits .container .hits-area .hits-item .btn {
     height: 44px;
 }
 
-section.hits .container .hits-area .hits-item .top span {
+section.hits .container .hits-area .hits-item .top p {
     background: #F0F5FB;
     border-radius: 4px;
     width: 52px;
     height: 22px;
+    font-weight: 800;
+    color: linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%), #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /*  */
@@ -484,4 +489,44 @@ footer .footer .footer-last .footer-button {
     align-items: right;
 }
 
+@media screen and (max-width: 1200px) {  
+    .container {
+        max-width: 90%;
+    }
 
+    section.banner .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.banner .right, 
+    section.banner .left {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section.katalog .container .katalog-area {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    section.hits .container .hits-area {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header.header-bottom .nav ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section.advantages .container .advantages,
+    section.map .container .map, section.about-company .title {
+        flex-direction: column;
+        align-items: center;
+    }
+}
